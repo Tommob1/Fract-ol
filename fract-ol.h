@@ -10,7 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRACT-OL_H
+#   define FRACT-OL_H
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <mlx.h>
+
+#endif
