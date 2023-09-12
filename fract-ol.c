@@ -14,11 +14,22 @@
 
 typedef struct  s_complex
 {
-
+    // x
+    double  real;
+    // y
+    double i;
 }
 
 
 int main()
 {
-    return (0);
+    t_complex   z;
+    // point
+    t_complex   c;
+
+    z.real = 0;
+    z.i = 0;
+
+    c.real = 5;
+    c.i = 2;
 }
