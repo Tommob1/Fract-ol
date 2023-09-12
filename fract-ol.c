@@ -12,7 +12,13 @@
 
 #include <fract-ol.h>
 
+typedef struct  s_complex
+{
+
+}
+
+
 int main()
 {
-    
+    return (0);
 }
