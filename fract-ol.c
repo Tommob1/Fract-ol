@@ -23,6 +23,10 @@ typedef struct  s_complex
 
 int main()
 {
+    int i;
+    
+    i = 0;
+    
     t_complex   z;
     // point
     t_complex   c;
