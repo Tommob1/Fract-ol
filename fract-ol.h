@@ -17,5 +17,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mlx.h>
+#include "libft/libft.h"
 
 #endif
