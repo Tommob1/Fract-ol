@@ -39,6 +39,7 @@ int	main()
 
 	while (i < 42)
 	{
+		//z = z^2 + c
 
 		i++;
 	}
