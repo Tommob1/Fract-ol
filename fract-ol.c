@@ -37,5 +37,9 @@ int	main()
 	c.real = 5;
 	c.i = 2;
 
-	while ()
+	while (i < 42)
+	{
+		
+		i++;
+	}
 }
