@@ -18,7 +18,7 @@ typedef	struct	s_complex
 	double  real;
 	// y
 	double i;
-}
+}	t_complex;
 
 
 int	main()
@@ -39,7 +39,7 @@ int	main()
 
 	while (i < 42)
 	{
-		
+
 		i++;
 	}
 }
