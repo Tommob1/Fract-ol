@@ -12,7 +12,7 @@
 
 #include <fract-ol.h>
 
-typedef struct	s_complex
+typedef struct s_complex
 {
 	// x
 	double	real;
@@ -22,24 +22,18 @@ typedef struct	s_complex
 
 int	main(void)
 {
-	int	i;
-    
-	i = 0;
-
 	t_complex	z;
-	// point
-	t_complex   c;
+	t_complex	c;
+	int			i;
 
+	i = 0;
 	z.real = 0;
 	z.i = 0;
-
 	c.real = 5;
 	c.i = 2;
-
 	while (i < 42)
 	{
 		//z = z^2 + c
-
 		i++;
 	}
 }
