@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fract-ol.h>
+#include <fract_ol.h>
 
 typedef struct s_complex
 {
-	// x
+	// 	x
 	double	real;
-	// y
+	// 	y
 	double	i;
 }	t_complex;
 
