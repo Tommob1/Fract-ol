@@ -12,16 +12,15 @@
 
 #include <fract-ol.h>
 
-typedef	struct	s_complex
+typedef struct	s_complex
 {
 	// x
-	double  real;
+	double	real;
 	// y
-	double i;
+	double	i;
 }	t_complex;
 
-
-int	main()
+int	main(void)
 {
 	int	i;
     
