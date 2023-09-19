@@ -12,18 +12,20 @@
 
 #include <fract_ol.h>
 
+// Real = X Axis
+// i = Y Axis
 typedef struct s_complex
 {
-	// 	x
 	double	real;
-	// 	y
 	double	i;
 }	t_complex;
 
+// General Formula: z = z^2 + c
 int	main(void)
 {
 	t_complex	z;
 	t_complex	c;
+	double		tmp_real;
 	int			i;
 
 	i = 0;
@@ -33,7 +35,9 @@ int	main(void)
 	c.i = 2;
 	while (i < 42)
 	{
-		//z = z^2 + c
-		i++;
+		tmp_real = (z.real * z.real) - (z.i * z.i);
+		z.i = 2 * z.real * z.i;
+		z.real = tmp_real;
+		++i;
 	}
 }
