@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fract_ol.h>
+#include "fract_ol.h"
 
 // Real = X Axis
 // i = Y Axis
@@ -38,6 +38,11 @@ int	main(void)
 		tmp_real = (z.real * z.real) - (z.i * z.i);
 		z.i = 2 * z.real * z.i;
 		z.real = tmp_real;
+
+		z.real += c.real;
+		z.i += c.i;
+		//MAKE NORMAL PRINTF FOR TESTING
+		ft_printf("iteration n -> %d real %f imaginary%f/n", i, z.real, z.i);
 		++i;
 	}
 }
