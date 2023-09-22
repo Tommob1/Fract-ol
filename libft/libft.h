@@ -31,6 +31,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 int		ft_printf(const char *format, ...);
