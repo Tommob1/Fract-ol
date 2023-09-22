@@ -41,8 +41,8 @@ int	main(void)
 
 		z.real += c.real;
 		z.i += c.i;
-		//MAKE NORMAL PRINTF FOR TESTING
-		ft_printf("iteration n -> %d real %f imaginary%f/n", i, z.real, z.i);
+		//CHANGE TO FT_PRINTF WHEN DONE TESTING
+		printf("iteration n -> %d real %f imaginary %f\n", i, z.real, z.i);
 		++i;
 	}
 }
