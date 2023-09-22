@@ -31,8 +31,8 @@ int	main(void)
 	i = 0;
 	z.real = 0;
 	z.i = 0;
-	c.real = 5;
-	c.i = 2;
+	c.real = 0.25;
+	c.i = 0.4;
 	while (i < 42)
 	{
 		tmp_real = (z.real * z.real) - (z.i * z.i);
