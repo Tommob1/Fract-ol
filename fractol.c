@@ -14,7 +14,7 @@
 
 int main(int argc, char **argv)
 {
-    if (argc == 2)
+    if (argc == 2 && !ft_strncmp(argv[1], "mandelbrot", 10))
     {
         
     }
