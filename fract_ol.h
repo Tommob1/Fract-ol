@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACT_OL_H
-#   define FRACT_OL_H
+#ifndef FRACTOL_H
+#   define FRACTOL_H
 
 #include <unistd.h>
 #include <stdio.h>
