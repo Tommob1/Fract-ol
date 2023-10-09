@@ -16,7 +16,11 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "minilibx_macos/mlx.h"
 #include "libft/libft.h"
+
+#define ERROR_MESSAGE "Please enter \
+        \n\t\"./fractol mandelbrot\"./fractol julia <value_1> <value_2>\""
 
 #endif
