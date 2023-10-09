@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fract_ol.h"
+#include "fractol.h"
 
 int main(int argc, char **argv)
 {
