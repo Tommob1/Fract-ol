@@ -23,7 +23,4 @@
 #define ERROR_MESSAGE "Please enter \
         \n\t\"./fractol mandelbrot\"./fractol julia <value_1> <value_2>\"\n"
 
-int	    ft_strncmp(const char *s1, const char *s2, size_t n);
-void	ft_putstr_fd(char *s, int fd);
-
 #endif
