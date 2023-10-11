@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     }
     else
     {
-        ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO); //COMPLETE
+        ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO);
         exit(EXIT_FAILURE);
     }
     
