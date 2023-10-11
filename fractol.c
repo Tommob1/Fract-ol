@@ -14,15 +14,15 @@
 
 int main(int argc, char **argv)
 {
-    if (argc == 2 && !ft_strncmp(argv[1], "mandelbrot", 10) s1: s2: n: 
-        || argc == 4 && !ft_strncmp(argv[1], "julia", 5)) s1: s2: n:
+    if (argc == 2 && !ft_strncmp(argv[1], "mandelbrot", 10)
+        || argc == 4 && !ft_strncmp(argv[1], "julia", 5))
     {
         
     }
     else
     {
-        ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO); s: fd:
-        exit(EXIT_FAILURE); status:
+        ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO);
+        exit(EXIT_FAILURE);
     }
     
 }
