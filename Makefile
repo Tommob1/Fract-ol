@@ -12,7 +12,7 @@
 
 # Variables
 
-NAME = fract-ol
+NAME = fractol
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 LFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
@@ -26,7 +26,7 @@ MLX = minilibx_macos/libmlx.a
 
 # Sources
 
-SRC_FILES = fract-ol.c
+SRC_FILES = fractol.c
 
 SRC_DIR = src
 
