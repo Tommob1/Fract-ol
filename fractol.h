@@ -33,13 +33,13 @@ typedef struct s_img
 }               t_img;
 
 
-typedef struct  s_fractol
+typedef struct  s_fractal
 {
     void    *mlx_connection;
     void    *mlx_window;
 
     t_img   img;
 
-}           t_fractol;
+}           t_fractal;
 
 #endif
