@@ -14,5 +14,6 @@
 
 void    fractal_init(t_fractal *fractal)
 {
+    fractal->mlx_connection = mlx_init();
     
 }
