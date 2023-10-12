@@ -23,6 +23,9 @@
 #define ERROR_MESSAGE "Please enter \
         \n\t\"./fractol mandelbrot\"./fractol julia <value_1> <value_2>\"\n"
 
+#define WIDTH   800
+#define HEIGHT  800
+
 typedef struct s_img
 {
     void    *img_ptr;
@@ -35,6 +38,7 @@ typedef struct s_img
 
 typedef struct  s_fractal
 {
+    char    *name;
     void    *mlx_connection;
     void    *mlx_window;
 
