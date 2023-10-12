@@ -21,4 +21,10 @@ void    fractal_init(t_fractal *fractal)
                                         WIDTH,
                                         HEIGHT, 
                                         fractal->name);
+    if (fractal->mlx_window == NULL)
+    {
+        mlx_destroy_display(fractal->mlx_connection);
+        free(fractal->mlx_connection);
+        malloc_error();
+    }
 }
