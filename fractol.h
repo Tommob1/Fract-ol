@@ -23,10 +23,23 @@
 #define ERROR_MESSAGE "Please enter \
         \n\t\"./fractol mandelbrot\"./fractol julia <value_1> <value_2>\"\n"
 
+typedef struct s_img
+{
+    void    *img_ptr;
+    char    *pixels_ptr;
+    int     bpp;
+    int     endian;
+    int     line_len;
+}               t_img;
+
+
 typedef struct  s_fractol
 {
     void    *mlx_connection;
     void    *mlx_window;
-}
+
+    t_img   img;
+
+}           t_fractol;
 
 #endif
