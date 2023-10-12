@@ -23,4 +23,10 @@
 #define ERROR_MESSAGE "Please enter \
         \n\t\"./fractol mandelbrot\"./fractol julia <value_1> <value_2>\"\n"
 
+typedef struct  s_fractol
+{
+    void    *mlx_connection;
+    void    *mlx_window;
+}
+
 #endif
