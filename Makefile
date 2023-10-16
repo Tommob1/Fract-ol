@@ -22,7 +22,7 @@ LFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 INC = inc
 LIBFT_INC = libft/includes
 LIBFT = libft/libft.a
-MLX = minilibx_macos/libmlx.a
+MLX = minilibx/mlx.a
 
 # Sources
 
