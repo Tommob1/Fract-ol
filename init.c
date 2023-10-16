@@ -12,6 +12,12 @@
 
 #include "fractol.h"
 
+static void    malloc_error(void)
+{
+    perror("Problems with malloc");
+    exit(EXIT_FAILURE);
+}
+
 void    fractal_init(t_fractal *fractal)
 {
     fractal->mlx_connection = mlx_init();
