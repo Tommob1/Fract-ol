@@ -28,7 +28,7 @@ MLX = minilibx_macos/libmlx.a
 
 SRC_FILES = fractol.c
 
-SRC_DIR = src
+SRC_DIR = fract-ol/
 
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
