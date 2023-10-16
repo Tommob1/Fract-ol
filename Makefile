@@ -26,7 +26,7 @@ MLX = minilibx/mlx.a
 
 # Sources
 
-SRC_FILES = fractol.c
+SRC_FILES = fract-ol/fractol.c
 
 SRC_DIR = fract-ol/
 
