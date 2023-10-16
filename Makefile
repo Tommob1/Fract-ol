@@ -58,11 +58,11 @@ $(LIBFT):
 
 $(MLX):
 	@echo "Making mlx"
-	$(MAKE) -C minilibx_macos
+	$(MAKE) -C minilibx
 
 clean:
 	$(MAKE) clean -C libft
-	@make -C minilibx_macos clean
+	@make -C minilibx clean
 	rm -f $(OBJS)
 	rm -df $(OBJ_DIR)
 
