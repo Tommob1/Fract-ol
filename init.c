@@ -27,4 +27,6 @@ void    fractal_init(t_fractal *fractal)
         free(fractal->mlx_connection);
         malloc_error();
     }
+    fractal->img.img_ptr = mlx_new_image(fractal->mlx_connection,
+                                        WIDTH, HEIGHT);
 }
