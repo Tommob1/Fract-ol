@@ -17,7 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "minilibx_macos/mlx.h"
+#include "minilibx/mlx.h"
 #include "libft/libft.h"
 
 #define ERROR_MESSAGE "Please enter \
