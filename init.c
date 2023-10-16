@@ -31,8 +31,13 @@ void    fractal_init(t_fractal *fractal)
                                         WIDTH, HEIGHT);
     if (fractal->img.img_ptr == NULL)
     {
+        mlx_destroy_window(fractal->mlx_connection, fractal->mlx_window);
         mlx_destroy_display(fractal->mlx_connection);
         free(fractal->mlx_connection);
         malloc_error();
     }
+    fractal->img.pixels_ptr = mlx_get_data_addr(fractal->img.img_ptr, 
+                                                &fractal->img.bpp,
+                                                &fractal->img.line_len,
+                                                &fractal->img.endian);
 }
