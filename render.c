@@ -12,4 +12,7 @@
 
 #include "fractol.h"
 
-
+void    fractal_render(t_fractal *fractal)
+{
+    
+}
