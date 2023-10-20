@@ -20,6 +20,10 @@ void    fractal_render(t_fractal *fractal)
     y = -1;
     while (++y < HEIGHT)
     {
-        
+        x = -1;
+        while (++x < WIDTH)
+        {
+            
+        }
     }
 }
