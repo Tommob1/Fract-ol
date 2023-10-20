@@ -18,4 +18,8 @@ void    fractal_render(t_fractal *fractal)
     int y;
 
     y = -1;
+    while (++y < HEIGHT)
+    {
+        
+    }
 }
