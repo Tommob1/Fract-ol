@@ -14,5 +14,8 @@
 
 void    fractal_render(t_fractal *fractal)
 {
-    
+    int x;
+    int y;
+
+    y = -1;
 }
