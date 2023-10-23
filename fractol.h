@@ -26,6 +26,13 @@
 #define WIDTH   800
 #define HEIGHT  800
 
+typedef struct  s_complex
+{
+    double  x;
+    double  y;
+}                t_complex;
+
+
 typedef struct s_img
 {
     void    *img_ptr;
