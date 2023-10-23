@@ -19,6 +19,9 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
 
     z.x = 0.0;
     z.y = 0.0;
+
+	c.x = map(x, -2, +2, 0, WIDTH);
+	c.y = map(y, +2, -2, 0, HEIGHT);
 }
 
 void	fractal_render(t_fractal *fractal)
