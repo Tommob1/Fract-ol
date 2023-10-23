@@ -14,7 +14,11 @@
 
 void    handle_pixel(int x, int y, t_fractal *fractal)
 {
-    
+    t_complex   z;
+    t_complex   c;
+
+    z.x = 0.0;
+    z.y = 0.0;
 }
 
 void    fractal_render(t_fractal *fractal)
