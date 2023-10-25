@@ -22,6 +22,17 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
 
 	c.x = map(x, -2, +2, 0, WIDTH);
 	c.y = map(y, +2, -2, 0, HEIGHT);
+
+    while ()
+    {
+        z = sum_complex(square_complex(z), c)
+
+        if ()
+        {
+            my_pixel_put();
+            return;
+        }
+    }
 }
 
 void	fractal_render(t_fractal *fractal)
