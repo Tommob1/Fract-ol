@@ -30,5 +30,8 @@ t_complex   sum_complex(t_complex z1, t_complex z2)
 
 t_complex   square_complex(t_complex z)
 {
-    
+    t_complex   result;
+
+    result.x = (z.x * z.x) - (z.y * z.y);
+    result.y = 2 * z.x * z.y;
 }
