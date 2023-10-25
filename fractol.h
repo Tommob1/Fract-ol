@@ -59,5 +59,7 @@ void	ft_putchar_fd(char c, int fd);
 void    fractal_init(t_fractal *fractal);
 double map(double unscaled_num, double new_min, double new_max,
 double old_min, double old_max);
+t_complex   sum_complex(t_complex z1, t_complex z2);
+t_complex   square_complex(t_complex z);
 
 #endif
