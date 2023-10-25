@@ -27,3 +27,8 @@ t_complex   sum_complex(t_complex z1, t_complex z2)
     result.y = z1.y + z2.y;
     return result;
 }
+
+t_complex   square_complex(t_complex z)
+{
+    
+}
