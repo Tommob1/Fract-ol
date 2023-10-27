@@ -21,7 +21,7 @@ static void    malloc_error(void)
 
 void    data_init(t_fractal *fractal)
 {
-    
+    fractal->escape_value = 4;
 }
 
 void    fractal_init(t_fractal *fractal)
