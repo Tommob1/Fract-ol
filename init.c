@@ -18,6 +18,12 @@ static void    malloc_error(void)
     exit(EXIT_FAILURE);
 }
 
+
+void    data_init(t_fractal *fractal)
+{
+    
+}
+
 void    fractal_init(t_fractal *fractal)
 {
     fractal->mlx_connection = mlx_init();
@@ -44,4 +50,5 @@ void    fractal_init(t_fractal *fractal)
                                                 &fractal->img.bpp,
                                                 &fractal->img.line_len,
                                                 &fractal->img.endian);
+    data_init(fractal);
 }
