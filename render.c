@@ -12,6 +12,15 @@
 
 #include "fractol.h"
 
+//Put pixel in image buffer
+static void pixel_put(int x, int y, t_img *img, int color)
+{
+    int offset;
+
+    offset = (y * img->line_len) + (x * (img->bpp / 8));
+    *(unsigned int *)(img->pixels_ptr + offset) = color;
+}
+
 void	handle_pixel(int x, int y, t_fractal *fractal)
 {
     t_complex	z;
@@ -33,9 +42,10 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
         if ((z.x * z.x) + (z.y * z.y) > fractal->escape_value)
         {
             color = map(i, BLACK, WHITE, 0, fractal->iterations_definition);
-            my_pixel_put();
+            pixel_put(x, y, &fractal->img, color);
             return;
         }
+        ++i;
     }
 
 }
