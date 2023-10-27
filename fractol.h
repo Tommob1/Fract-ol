@@ -51,6 +51,8 @@ typedef struct  s_fractal
 
     t_img   img;
 
+    double  escape_value;
+
 }           t_fractal;
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
