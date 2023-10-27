@@ -27,7 +27,7 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
     {
         z = sum_complex(square_complex(z), c)
 
-        if ()
+        if ((z.x * z.x) + (z.y * z.y))
         {
             my_pixel_put();
             return;
