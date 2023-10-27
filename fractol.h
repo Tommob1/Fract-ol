@@ -52,6 +52,7 @@ typedef struct  s_fractal
     t_img   img;
 
     double  escape_value;
+    int     iterations_definition;
 
 }           t_fractal;
 
