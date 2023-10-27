@@ -27,7 +27,7 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
     {
         z = sum_complex(square_complex(z), c)
 
-        if ((z.x * z.x) + (z.y * z.y))
+        if ((z.x * z.x) + (z.y * z.y) > fractal->escape_value)
         {
             my_pixel_put();
             return;
