@@ -77,6 +77,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void    fractal_init(t_fractal *fractal);
+void    fractal_render(t_fractal *fractal);
 double map(double unscaled_num, double new_min, double new_max,
 double old_min, double old_max);
 t_complex   sum_complex(t_complex z1, t_complex z2);
