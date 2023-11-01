@@ -21,7 +21,7 @@ static void pixel_put(int x, int y, t_img *img, int color)
     *(unsigned int *)(img->pixels_ptr + offset) = color;
 }
 
-void	handle_pixel(int x, int y, t_fractal *fractal)
+static void	handle_pixel(int x, int y, t_fractal *fractal)
 {
     t_complex	z;
     t_complex	c;
@@ -47,7 +47,7 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
         }
         ++i;
     }
-
+    pixel_put(x, y, &fractal->img, PSYCHEDELIC_PURPLE);
 }
 
 void	fractal_render(t_fractal *fractal)
@@ -64,4 +64,8 @@ void	fractal_render(t_fractal *fractal)
             handle_pixel(x, y, fractal);
         }
     }
+    mlx_put_image_to_window(fractal->mlx_connection,
+                            fractal->mlx_window,
+                            fractal->img.img_ptr,
+                            0,0);
 }
