@@ -10,66 +10,80 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Variables
+#Program name
+NAME				=	fractol
 
-NAME = fractol
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-LFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
+# Compiler and CFlags
+CC					=	gcc
+CFLAGS				=	-Wall -Werror -Wextra
+RM					=	rm -f
 
-# Inlcudes
+# Determine the platform
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S), Linux)
+	LIBS = -lXext -lX11 -lm
+	MLX = ./minilibx-linux/libmlx.a
+	INC = inc/ libft/ minilibx-linux/
+else ifeq ($(UNAME_S), Darwin)
+	LIBS = -Lminilibx-macos -lmlx -framework OpenGL -framework AppKit -lm
+	MLX = ./minilibx-macos/libmlx.a
+	INC = inc/ libft/ minilibx-macos/
+endif
 
-INC = inc
-LIBFT_INC = libft/includes
-LIBFT = libft/libft.a
-MLX = minilibx/mlx.a
+# Directories
+LIBFT				=	./libft/libft.a
+SRC_DIR				=	src/
+OBJ_DIR				=	obj/
 
-# Sources
+# Source Files
+SRC					=	fractol.c \
+						init.c \
+						render.c \
+						events.c \
+						utils1.c \
+						utils2.c \
+						colours.c
 
-SRC_FILES = fract-ol/fractol.c
+SRCS				=	$(addprefix $(SRC_DIR), $(SRC))
 
-SRC_DIR = fract-ol/
+# Object files
+OBJ 				= 	$(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 
-SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
+# Build rules
 
-OBJ_DIR = obj
+all: 					$(MLX) $(LIBFT) $(NAME)
 
-OBJ_RAW = $(SRC_FILES:.c=.o)
-
-OBJS = $(addprefix $(OBJ_DIR)/, $(OBJ_RAW))
-
-# Rules
-
-all: $(OBJ_DIR) $(NAME)
-
-$(NAME): $(MLX) $(LIBFT) $(OBJS)
-	$(CC) $(OBJS) -L libft -lft $(LFLAGS) -o $@
-
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@echo "Making $<"
-	$(CC) $(CFLAGS) -I $(INC) -I $(LIBFT_INC) -c $< -o $@
-
-$(OBJ_DIR):
-	mkdir -p $@
+$(NAME): 				$(OBJ) $(MLX) $(LIBFT)
+						@$(CC) $(CFLAGS) $(OBJ) $(MLX) $(LIBFT) $(LIBS) -o $(NAME)
 
 $(LIBFT):
-	@echo "Making libft"
-	$(MAKE) -C libft
+						@make -sC ./libft
 
 $(MLX):
-	@echo "Making mlx"
-	$(MAKE) -C minilibx
+						@if [ "$(UNAME_S)" = "Linux" ]; then \
+							make -sC ./minilibx-linux; \
+						else \
+							make -sC ./minilibx-macos; \
+						fi
+
+						
+
+# Compile object files from source files
+$(OBJ_DIR)%.o:			$(SRC_DIR)%.c 
+						@mkdir -p $(@D)
+						@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(MAKE) clean -C libft
-	@make -C minilibx clean
-	rm -f $(OBJS)
-	rm -df $(OBJ_DIR)
+						@$(RM) -r $(OBJ_DIR)
+						@make clean -C $(dir $(MLX))
+						@make clean -C ./libft
 
-fclean: clean
-	$(MAKE) fclean -C libft
-	rm -f $(NAME)
+fclean: 				clean
+						@$(RM) $(NAME)
+						@$(RM) $(MLX)
+						@$(RM) $(LIBFT)
 
-re: fclean all
+re: 					fclean all
 
-.PHONY: all libft clean fclean re
+# Phony targets represent actions not files
+.PHONY: 				all clean fclean re
