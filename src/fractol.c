@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 15:15:59 by btomlins          #+#    #+#             */
-/*   Updated: 2023/11/07 13:18:49 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:30:30 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ int	main(int argc, char **argv)
 		mlx_loop(fract.mlx_connect);
 		return (0);
 	}
-	ft_printf("Invalid input\nTry:\n");
-	ft_printf("<./fractol mandelbrot> or\n<./fractosl julia -0.4 +0.6>");
-	ft_printf(" or\n<./fractol julia -0.835 -0.2321>\n");
+	ft_printf("Invalid input\n");
 	exit(EXIT_FAILURE);
 }
