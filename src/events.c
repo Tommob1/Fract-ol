@@ -25,13 +25,13 @@ int	handle_key(int key, t_fractol *fract)
 	if (key == 53)
 		clean_exit(fract);
 	else if (key == 123 || key == 0)
-		fract->shift_r += (0.1 * fract->zoom);
-	else if (key == 124 || key == 2)
 		fract->shift_r -= (0.1 * fract->zoom);
+	else if (key == 124 || key == 2)
+		fract->shift_r += (0.1 * fract->zoom);
 	else if (key == 126 || key == 13)
-		fract->shift_i -= (0.1 * fract->zoom);
-	else if (key == 125 || key == 1)
 		fract->shift_i += (0.1 * fract->zoom);
+	else if (key == 125 || key == 1)
+		fract->shift_i -= (0.1 * fract->zoom);
 	else if (key == 69)
 		fract->iterations += 30;
 	else if (key == 78)
