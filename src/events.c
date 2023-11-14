@@ -62,8 +62,9 @@ int	handle_mouse(int button, int x, int y, t_fractol *fract)
 
 	mouse_r = (x - WIDTH / 2) / (0.5 * WIDTH * fract->zoom) + \
 		fract->shift_r;
-	mouse_i = (y - HEIGHT / 2) / (0.5 * HEIGHT * fract->zoom) + \
-	fract->shift_i;
+	mouse_i = ((HEIGHT - y) - HEIGHT / 2) / (0.5 * HEIGHT * fract->zoom) + \
+		fract->shift_i;
+
 	if (!ft_strncmp(fract->title, "Julia", 5))
 		julia_track(button, x, y, fract);
 	if (button == 4)
