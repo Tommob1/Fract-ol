@@ -26,7 +26,7 @@ typedef struct s_list
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
-int	ft_toupper(int c);
+int		ft_toupper(int c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
