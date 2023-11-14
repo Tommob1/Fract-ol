@@ -33,6 +33,8 @@ int	main(int argc, char **argv)
 		mlx_loop(fract.mlx_connect);
 		return (0);
 	}
-	ft_printf("Invalid input\n");
+	ft_printf("Invalid input\nTry:\n");
+	ft_printf("<./fractol mandelbrot> or\n<./fractol julia -0.3 +0.4>");
+	ft_printf(" or\n<./fractol julia -0.732 -0.1822>\n");
 	exit(EXIT_FAILURE);
 }
